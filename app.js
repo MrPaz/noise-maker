@@ -1,12 +1,22 @@
 (function(){
     var inited = false;
-    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    var oscillator = audioCtx.createOscillator();
-    var filter = audioCtx.createBiquadFilter();
+    var audioCtx, oscillator, oscillator2, filter;
 
     function initialize(){
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        oscillator = audioCtx.createOscillator();
         oscillator.start();
-        oscillator.connect(filter);    
+
+        filter = audioCtx.createBiquadFilter();
+
+        oscillator.connect(filter);
+
+        oscillator2 = audioCtx.createOscillator();
+        oscillator2.frequency.value = 0;
+        oscillator2.start();
+        oscillator2.connect(audioCtx.destination);
+        
+        inited = true;
     }
     function toggleOscillatorOn(){
         if (!inited){
