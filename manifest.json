@@ -1,0 +1,21 @@
+{
+    "short_name": "NoiseMaker",
+    "name": "Code Temple NoiseMaker",
+    "icons": [
+      {
+        "src": "noise.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "noise-lg.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/noise-maker/index.html",
+    "background_color": "white",
+    "display": "standalone",
+    "scope": "/noisemaker/",
+    "theme_color": "white"
+  }
