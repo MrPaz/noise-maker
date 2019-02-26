@@ -2,21 +2,17 @@
 <html>
     <head>
         <title>NoiseMaker</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="white">
         <link rel="manifest" href="manifest.json">
         <link rel='stylesheet' href='main.css' />
     </head>
     <body id="noise">
-        <script>
-            if('serviceWorker' in navigator) {
-                navigator.serviceWorker
-                    .register('sw.js')
-                    .then(function() { console.log("Service Worker Registered"); });
-            }
-        </script>
-        <script type="text/javascript" src="app.js"></script>
+        <noscript>
+            JavaScript must be enabled for this site to function properly.
+        </noscript>
+    <script src="app.js" async></script>
     </body>
     
 </html>
